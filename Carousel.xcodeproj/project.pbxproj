@@ -14,8 +14,13 @@
 		8A45E0FA1BE9456D0075BC5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A45E0F81BE9456D0075BC5E /* LaunchScreen.storyboard */; };
 		8A45E1051BE9456D0075BC5E /* CarouselTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45E1041BE9456D0075BC5E /* CarouselTests.swift */; };
 		8A45E1101BE9456D0075BC5E /* CarouselUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45E10F1BE9456D0075BC5E /* CarouselUITests.swift */; };
+		8A57D6B01BE991D000890A8D /* TutorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A57D6AF1BE991D000890A8D /* TutorialViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8A67DFD51BE9F93900F6BCD7 /* TimelineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67DFD41BE9F93900F6BCD7 /* TimelineViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8A67DFD71BE9FD5100F6BCD7 /* ConversationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67DFD61BE9FD5100F6BCD7 /* ConversationsViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8A67DFD91BE9FE4800F6BCD7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A67DFD81BE9FE4800F6BCD7 /* SettingsViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		8AE028FA1BE948F100B53312 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE028F91BE948F100B53312 /* Common.swift */; settings = {ASSET_TAGS = (); }; };
 		8AE028FC1BE9495A00B53312 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE028FB1BE9495A00B53312 /* IntroViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		8AE028FE1BE971C200B53312 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AE028FD1BE971C200B53312 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,8 +54,13 @@
 		8A45E10B1BE9456D0075BC5E /* CarouselUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CarouselUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A45E10F1BE9456D0075BC5E /* CarouselUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselUITests.swift; sourceTree = "<group>"; };
 		8A45E1111BE9456D0075BC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A57D6AF1BE991D000890A8D /* TutorialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialViewController.swift; sourceTree = "<group>"; };
+		8A67DFD41BE9F93900F6BCD7 /* TimelineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineViewController.swift; sourceTree = "<group>"; };
+		8A67DFD61BE9FD5100F6BCD7 /* ConversationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsViewController.swift; sourceTree = "<group>"; };
+		8A67DFD81BE9FE4800F6BCD7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		8AE028F91BE948F100B53312 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		8AE028FB1BE9495A00B53312 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		8AE028FD1BE971C200B53312 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +119,11 @@
 				8A45E0F81BE9456D0075BC5E /* LaunchScreen.storyboard */,
 				8A45E0FB1BE9456D0075BC5E /* Info.plist */,
 				8AE028FB1BE9495A00B53312 /* IntroViewController.swift */,
+				8AE028FD1BE971C200B53312 /* LoginViewController.swift */,
+				8A57D6AF1BE991D000890A8D /* TutorialViewController.swift */,
+				8A67DFD41BE9F93900F6BCD7 /* TimelineViewController.swift */,
+				8A67DFD61BE9FD5100F6BCD7 /* ConversationsViewController.swift */,
+				8A67DFD81BE9FE4800F6BCD7 /* SettingsViewController.swift */,
 			);
 			path = Carousel;
 			sourceTree = "<group>";
@@ -264,7 +279,12 @@
 				8A45E0F21BE9456D0075BC5E /* ViewController.swift in Sources */,
 				8AE028FA1BE948F100B53312 /* Common.swift in Sources */,
 				8A45E0F01BE9456D0075BC5E /* AppDelegate.swift in Sources */,
+				8A67DFD71BE9FD5100F6BCD7 /* ConversationsViewController.swift in Sources */,
+				8AE028FE1BE971C200B53312 /* LoginViewController.swift in Sources */,
+				8A67DFD51BE9F93900F6BCD7 /* TimelineViewController.swift in Sources */,
+				8A57D6B01BE991D000890A8D /* TutorialViewController.swift in Sources */,
 				8AE028FC1BE9495A00B53312 /* IntroViewController.swift in Sources */,
+				8A67DFD91BE9FE4800F6BCD7 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
