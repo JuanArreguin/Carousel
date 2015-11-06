@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UIScrollViewDelegate {
     
     
     @IBOutlet weak var scrollView: UIScrollView!
@@ -31,9 +31,12 @@ class LoginViewController: UIViewController {
         
         scrollView.contentSize = CGSize(width: 320, height: 600)
         
+        scrollView.delegate = self
+        
         // Keyboard Push
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillShow:", name: UIKeyboardWillShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillHide:", name: UIKeyboardWillHideNotification, object: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -43,7 +46,15 @@ class LoginViewController: UIViewController {
     
     //Keyboard Slide up/down
     
-    func keyboardWillShow(notification: NSNotification!) {
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        print("content offset: \(scrollView.contentOffset.y)")
+        if scrollView.contentOffset.y <= 90 {
+            view.endEditing(true)
+        }
+    }
+    
+    
+    func keyboardWillShow(notification: NSNotification) {
         buttonParentView.transform = CGAffineTransformMakeTranslation(0, 0)
         let maxContentOffsetY = scrollView.contentSize.height - scrollView.frame.size.height
         scrollView.contentOffset.y = maxContentOffsetY
@@ -51,7 +62,7 @@ class LoginViewController: UIViewController {
         
     }
     
-    func keyboardWillHide(notification: NSNotification!) {
+    func keyboardWillHide(notification: NSNotification) {
         buttonParentView.transform = CGAffineTransformIdentity
         scrollView.contentOffset.y = 0
         scrollView.scrollEnabled = false
@@ -78,7 +89,7 @@ class LoginViewController: UIViewController {
         }
         else if emailField.text == "" || passwordField.text == "" {
             
-            let emptyAlert = UIAlertController(title: "Missing something?", message: "Try that one again.", preferredStyle: UIAlertControllerStyle.Alert)
+            let emptyAlert = UIAlertController(title: "Missing something?", message: "Both your email and password are needed!", preferredStyle: UIAlertControllerStyle.Alert)
             
             let okAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
             })
@@ -91,7 +102,7 @@ class LoginViewController: UIViewController {
             loginIndicator.startAnimating()
             delay(2, closure: { () -> () in
                 
-                let alert = UIAlertController(title: "Heads up!", message: "Let's try that again.", preferredStyle: UIAlertControllerStyle.Alert)
+                let alert = UIAlertController(title: "Incorrect Login", message: "Check your email and password to make sure they are correct.", preferredStyle: UIAlertControllerStyle.Alert)
                 
                 let okAction = UIAlertAction(title: "Got it", style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
                     self.loginIndicator.stopAnimating()
@@ -106,15 +117,7 @@ class LoginViewController: UIViewController {
     }
 
     
-    
-    
-    
-    
-    //
-    // Transition Back to previous view.
-    //
-    
-    
+    // Sign in button was clicked
     @IBAction func didTapBackButton(sender: AnyObject) {
         navigationController!.popViewControllerAnimated(true)
     }
